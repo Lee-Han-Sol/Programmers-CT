@@ -24,3 +24,5 @@ class Solution
         return answer;
     }
 }
+
+//스택을 이용하지않는 방법은 속도가 더 빠르긴 하지만 옳은 방향일지는?
