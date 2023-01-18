@@ -1,5 +1,32 @@
 import java.util.*;
 
+//내 코드
+class Solution {
+    public int[] solution(String[] genres, int[] plays) {
+        int[] answer = {};
+        HashMap<String,Integer> total = new HashMap<String,Integer>();
+        for(int i = 0 ; i< genres.length; i++){
+            if(total.get(genres[i])!=null){
+                total.put(genres[i],total.get(genres[i])+plays[i]);
+            }else{
+                total.put(genres[i],plays[i]);
+            }
+	/* 위 코드는 아래처럼 가능
+	for(int i=0; i<genres.length; i++){
+            total.put(genres[i], total.getOrDefault(genres[i], 0)+plays[i]);
+        }
+	*/
+	List<String> sort = new ArrayList<>(total.keySet()); // 판매량 순 
+        System.out.println(sort);
+		
+        }
+        
+        return answer;
+    }
+}
+
+
+//다른 사람 풀이
 public class Solution {
 
     static class Music{
@@ -61,3 +88,5 @@ public class Solution {
         return answer;
     }
 }
+
+
