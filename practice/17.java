@@ -1,4 +1,5 @@
-public class Q30_131130 {
+public class Solution {
+    
     public int solution(int[] cards) {
         int length = cards.length;
 
